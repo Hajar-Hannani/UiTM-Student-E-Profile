@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UiTM STUDENT E-PROFILE</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+   <!-- Header -->
+<div class="container my-4 text-left">
+  <h1 class="title">UiTM STUDENT E-PROFILE</h1>
+</div>
+
+
+ <!-- navigation -->
+ <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+   <img src="img/logo sahaja.png" alt="E-PROFILE logo" width="50px" >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutme.html">About Me</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" href="contactus.html">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+    
+          </ul>
+          <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="darkModeToggle"/>
+              <label class="form-check-label" for="darkModeToggle" id="themeLabel">Dark Mode</label>
+          </div>
+          
+  </div>
+</nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section position-relative" style="height: 75vh; overflow: hidden;">
+      <img src="img/teknolgi.jpg" alt="UiTM" class="img-fluid w-100" style="object-fit: cover; height: 100%; filter: brightness(50%);">
+      <div class="container text-center text-white position-absolute top-50 start-50 translate-middle">
+        <h1 class="display-4 fw-bold" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);">Welcome To UiTM Student e-Profile</h1>
+        <p class="lead" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">UiTM Di Hatiku</p>
+        <a href="profilesection.html" class="btn btn-primary mt-3">
+          <i class="fa-solid fa-user"></i> Explore Student Profiles
+        </a>
+      </div>
+    </header>
+
+    <!-- Content Section -->
+    <div class="container-fluid bg-body-tertiary py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 text-center">
+            <img src="img/logo.png" alt="UiTM Logo" width="175px">
+          </div>
+          <div class="col-md-10">
+            <h3>UiTM STUDENT E-PROFILE</h3>
+            <h6>Universiti Teknologi MARA</h6>
+            <p style="text-align: justify; line-height: 1.8;">
+            Welcome to the UiTM Student E-Profile, a dynamic online platform showcasing the diverse
+             and talented students of Universiti Teknologi MARA (UiTM). This platform features individual 
+             student profiles from various academic fields, providing a glimpse into their personal achievements, 
+             skills, and areas of expertise. Each profile card highlights the student's photo, department, 
+             and a brief introduction, offering a unique opportunity to learn more about the individuals 
+             who make up the UiTM community. Whether you’re a prospective student,
+            academic, or employer, the UiTM Student E-Profile provides an easy and engaging way to discover the
+             breadth of talent and potential within UiTM. Explore the platform and connect with the next generation of innovators, leaders, and professionals.
+            </p>
+            <div>
+              <span class="badge text-bg-success py-2 px-2"><i class="fa-solid fa-user"></i> 101,000 Active Profiles</span>
+              <span class="badge text-bg-warning py-2 px-2"><i class="fa-solid fa-graduation-cap"></i> 20,650 Alumni Profiles</span>
+              <span class="badge text-bg-danger py-2 px-2"><i class="fa-solid fa-clock-rotate-left"></i> 500 Pending Profiles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart Section -->
+    <div class="container mt-5 mb-5">
+      <div class="row">
+          <!-- Pie Chart Section (Left Side) -->
+          <div class="col-md-5">
+              <div class="card">
+                  <div class="card-header bg-success text-white text-center">
+                      <h5>Profile Distribution</h5>
+                  </div>
+                  <div class="card-body">
+                      <canvas id="pieChart" style="max-width: 100%; height: 300px;"></canvas>
+                  </div>
+                  <div class="card-footer text-center">
+                      <small>Breakdown of Active, Alumni, and Pending Profiles</small>
+                  </div>
+              </div>
+          </div>
+  
+    
+           <!-- Info Cards Section (Right Side) -->
+    <div class="col-md-7">
+      <div class="card bg-body-tertiary mb-3" >
+        <div class="card-body">
+          <h6><i class="fa-solid fa-check-circle text-success"></i> Completed Profiles</h6>
+          <p>A total of <strong>65%</strong> of profiles have been completed, indicating strong student engagement.</p>
+        </div>
+      </div>
+      <div class="card bg-body-tertiary mb-3">
+        <div class="card-body">
+          <h6><i class="fa-solid fa-graduation-cap"></i> Alumni Profiles</h6>
+          <p>Approximately <strong>25%</strong> of profiles are alumni.</p>
+        </div>
+      </div>
+      <div class="card bg-body-tertiary">
+        <div class="card-body">
+          <h6><i class="fa-solid fa-clock text-danger"></i> Pending Profiles</h6>
+          <p>Only <strong>10%</strong> of profiles remain pending, reflecting a low backlog in the system.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <script>
+    // Initialize the Pie Chart
+    const ctx = document.getElementById('pieChart').getContext('2d');
+    const pieChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Active Profiles', 'Alumni Profiles', 'Pending Profiles'], // Chart labels
+            datasets: [{
+                data: [101000, 20650, 500], // Data values
+                backgroundColor: ['#4caf50', '#ff9800', '#f44336'], // Colors for the slices
+                borderColor: ['#ffffff', '#ffffff', '#ffffff'], // Optional: border color
+                borderWidth: 1 // Optional: border width
+            }]
+        },
+        options: {
+            responsive: true, // Makes the chart responsive
+            plugins: {
+                legend: {
+                    display: true, // Show the legend
+                    position: 'top' // Position of the legend
+                },
+                tooltip: {
+                    enabled: true // Enable tooltips on hover
+                }
+            }
+        }
+    });
+  </script>
+
+           
+
+<footer 
+class="text-center" 
+style="background-color: #393741; color: white; padding: 40px 0; border-radius: 5px;">
+<div class="container">
+    <!-- About UiTM -->
+    <h5 style="font-weight: bold; font-size: 1.2rem; text-transform: uppercase; color: #f4f4f4; margin-bottom: 20px;">About UiTM</h5>
+    <p style="font-size: 0.9rem; color: #ccc; line-height: 1.6;">Universiti Teknologi MARA (UiTM) is a premier public university in Malaysia, committed to delivering excellence in education, fostering innovation, and empowering students to achieve their goals in a globalized world.</p>
+    
+    <!-- Social Media Section -->
+    <div class="my-4">
+      <a href="https://www.facebook.com/share/19ecykDmf5/?mibextid=wwXIfr" target="_blank" 
+         style="color: white; font-size: 1.8rem; margin: 0 15px; display: inline-block; text-decoration: none;">
+          <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://x.com/uitmofficial" target="_blank" 
+         style="color: white; font-size: 1.8rem; margin: 0 15px; display: inline-block; text-decoration: none;">
+          <i class="fab  fa-x-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/uitm.official?igsh=NGZ4NWZ0dXJ6Mjhy" target="_blank" 
+         style="color: white; font-size: 1.8rem; margin: 0 15px; display: inline-block; text-decoration: none;">
+          <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/school/universiti-teknologi-mara/posts/?feedView=all" target="_blank" 
+         style="color: white; font-size: 1.8rem; margin: 0 15px; display: inline-block; text-decoration: none;">
+          <i class="fab fa-linkedin-in"></i>
+      </a>
+  </div> 
+
+  <!-- Footer Bottom -->
+  <div style="border-top: 1px solid #333; padding-top: 20px; margin-top: 30px; font-size: 0.8rem; color: #666;">
+    <p>&copy; 2025 Universiti Teknologi MARA. All rights reserved.</p>
+</div>
+</div>
+</footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Dark Mode Script -->
+    <script>
+      function setTheme(theme) {
+        document.documentElement.setAttribute("data-bs-theme", theme);
+        localStorage.setItem("theme", theme);
+        document.getElementById("themeLabel").innerText = theme === "dark" ? "Dark Mode On" : "Dark Mode Off";
+      }
+
+      document.getElementById("darkModeToggle").addEventListener("change", function (event) {
+        setTheme(event.target.checked ? "dark" : "light");
+      });
+
+      window.onload = function () {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+          setTheme(savedTheme);
+          if (savedTheme === "dark") document.getElementById("darkModeToggle").checked = true;
+        }
+      };
+    </script>
+  </body>
+</html>

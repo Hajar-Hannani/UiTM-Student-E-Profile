@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eProfile</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  
+</head>
+<body>
+
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+       <img src="img/logo sahaja.png" alt="E-PROFILE logo" width="50px" >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutme.html">About Me</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+        
+              </ul>
+              <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="darkModeToggle"/>
+                  <label class="form-check-label" for="darkModeToggle" id="themeLabel">Dark Mode</label>
+              </div>
+              
+      </div>
+    </nav>
+
+   
+
+      <!-- UiTM Student E-Profile Section -->
+<div class="container-fluid" bg-tertiary style="background-color: #3987d6;"> 
+  <div class="container">
+      <div class="row py-5 justify-content-center text-center">
+          <!-- Text Content Section -->
+          <div class="col-md-8">
+              <h3>UiTM STUDENT E-PROFILE</h3>
+              <h6>Showcasing Excellence, One Profile at a Time</h6>
+              <p>
+                  Welcome to UiTM Student E-Profile, an online platform that features 
+                  the profiles of UiTM students from different academic fields. 
+                  The student's picture, department, and a brief introduction 
+                  are highlighted on each profile card. Discover the diversity and talent of UiTM students by exploring this platform.
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Search Bar -->
+<div class="container my-4">
+  <div class="row">
+      <div class="col-md-6 mx-auto">
+          <div class="input-group">
+              <span class="input-group-text bg-primary text-white">
+                  <i class="fas fa-search"></i>
+              </span>
+              <input type="text" id="searchBar" class="form-control" placeholder="Search by student name..." onkeyup="filterProfiles()">
+          </div>
+      </div>
+  </div>
+</div>
+      
+
+     <!-- Profile Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row" id="profileCards">
+
+      <!-- Profile Card 1 -->
+      <div class="col-md-4 mb-4 profile-card" data-name="Sarah Husna Binti Amat Nasir">
+        <div class="card shadow-sm">
+          <img src="img/sains pertanian.jpg" class="card-img-top" alt="Sarah Husna">
+          <div class="card-body text-center">
+            <h5 class="card-title">Sarah Husna Binti Amat Nasir</h5>
+            <p class="card-text">Bachelor Degree of Agricultural Science</p>
+            <a href="viewprofile1.html" class="btn btn-primary">View Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Card 2 -->
+      <div class="col-md-4 mb-4 profile-card" data-name="Sofea Shahira Binti Ali">
+        <div class="card shadow-sm">
+          <img src="img/dr.jpg" class="card-img-top" alt="Sofea Shahira">
+          <div class="card-body text-center">
+            <h5 class="card-title">Sofea Shahira Binti Ali</h5>
+            <p class="card-text">Bachelor of Medicine and Bachelor of Surgery</p>
+            <a href="viewprofile2.html" class="btn btn-primary">View Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Card 3 -->
+      <div class="col-md-4 mb-4 profile-card" data-name="Muhammad Nabil Bin Amat">
+        <div class="card shadow-sm">
+          <img src="img/student lelaki.jpg" class="card-img-top" alt="Muhammad Nabil">
+          <div class="card-body text-center">
+            <h5 class="card-title">Muhammad Nabil Bin Amat</h5>
+            <p class="card-text">Bachelor Degree of Mechanical Engineering</p>
+            <a href="viewprofile3.html" class="btn btn-primary">View Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Card 4 -->
+      <div class="col-md-4 mb-4 profile-card" data-name="Tun Laila Binti Tun Rafaie">
+        <div class="card shadow-sm">
+          <img src="img/tun laila.jpg" class="card-img-top" alt="Tun Laila">
+          <div class="card-body text-center">
+            <h5 class="card-title">Tun Laila Binti Tun Rafaie</h5>
+            <p class="card-text">Bachelor Degree of Law</p>
+            <a href="viewprofile4.html" class="btn btn-primary">View Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Card 5 -->
+      <div class="col-md-4 mb-4 profile-card" data-name="Louisa Windsor">
+        <div class="card shadow-sm">
+          <img src="img/wanita.jpg" class="card-img-top" alt="Louisa Windsor">
+          <div class="card-body text-center">
+            <h5 class="card-title">Louisa Windsor</h5>
+            <p class="card-text">Bachelor Degree of Information System Management</p>
+            <a href="viewprofile5.html" class="btn btn-primary">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function filterProfiles() {
+      const searchInput = document.getElementById("searchBar").value.toLowerCase();
+      const profileCards = document.querySelectorAll(".profile-card");
+
+      profileCards.forEach((card) => {
+          const studentName = card.getAttribute("data-name").toLowerCase();
+          if (studentName.includes(searchInput)) {
+              card.style.display = "block";
+          } else {
+              card.style.display = "none";
+          }
+      });
+  }
+</script>
+
+  <!-- darkmode script -->
+  <script>
+    function setTheme (theme){
+        document.documentElement.setAttribute("data-bs-theme", theme);
+        localStorage.setItem("theme", theme);
+        document.getElementById("themeLabel").innerText =
+        theme === "dark" ? "Dark Mode On" : "Dark Mode Off";
+    }
+    
+    document
+        .getElementById ("darkModeToggle")
+        .addEventListener ("change", function (event) {
+            if (event.target.checked) {
+                setTheme ("dark");
+            } else {
+                setTheme("light");
+            }
+        });
+
+        window.onload = function () {
+            let savedTheme = localStorage.getItem("theme");
+            if (savedTheme) {
+                setTheme(savedTheme);
+                if(savedTheme ==="dark") {
+                    document.getElementById("darkModeToggle").checked=true;
+
+                }
+            }
+        };
+         
+ </script>
+
+<footer 
+class="text-center" 
+style="background-color: #393741; color: white; padding: 40px 0; border-radius: 5px;">
+<div class="container">
+    <!-- About UiTM -->
+    <h5 style="font-weight: bold; font-size: 1.2rem; text-transform: uppercase; color: #f4f4f4; margin-bottom: 20px;">About UiTM</h5>
+    <p style="font-size: 0.9rem; color: #ccc; line-height: 1.6;">Universiti Teknologi MARA (UiTM) is a premier public university in Malaysia, committed to delivering excellence in education, fostering innovation, and empowering students to achieve their goals in a globalized world.</p>
+    
+    
+    <!-- Social Media Section -->
+    <div class="my-4">
+      <a href="https://www.facebook.com/uitm" target="_blank" 
+         style="color: white; font-size: 1.8rem; margin: 0 15px; display: inline-block; text-decoration: none;">
+          <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://x.com/uitmofficial" target="_blank" 
+         style="color: white; font-size: 1.8rem; margin: 0 15px; display: inline-block; text-decoration: none;">
+          <i class="fab  fa-x-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/uitm" target="_blank" 
+         style="color: white; font-size: 1.8rem; margin: 0 15px; display: inline-block; text-decoration: none;">
+          <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/school/uitm" target="_blank" 
+         style="color: white; font-size: 1.8rem; margin: 0 15px; display: inline-block; text-decoration: none;">
+          <i class="fab fa-linkedin-in"></i>
+      </a>
+  </div>
+
+   <!-- Footer Bottom -->
+   <div style="border-top: 1px solid #333; padding-top: 20px; margin-top: 30px; font-size: 0.8rem; color: #666;">
+    <p>&copy; 2025 Universiti Teknologi MARA. All rights reserved.</p>
+</div>
+</div>
+</footer>
+  
+
+  <!-- Bootstrap JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
